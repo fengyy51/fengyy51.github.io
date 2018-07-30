@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>git常用命令（逐步增加中。。。） | 日常记录</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="MinHow,MinHow's Blog" />
+  
+  <meta name="description" content="本地仓库初始化 git init：初始化本地仓库，此时可以使用git命令 git clone：将远程代码库以及提交历史添加到本地，此时不需要再次git init操作  配置 git config list 显示当前的git配置 git config （–global）user.name “xxx” 设置用户名，如果设置global则设为全局 git config （–global）user.e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git常用命令（逐步增加中。。。）">
+<meta property="og:url" content="https://fengyy51.github.io/2018/07/30/gituse/index.html">
+<meta property="og:site_name" content="日常记录">
+<meta property="og:description" content="本地仓库初始化 git init：初始化本地仓库，此时可以使用git命令 git clone：将远程代码库以及提交历史添加到本地，此时不需要再次git init操作  配置 git config list 显示当前的git配置 git config （–global）user.name “xxx” 设置用户名，如果设置global则设为全局 git config （–global）user.e">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-30T05:01:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git常用命令（逐步增加中。。。）">
+<meta name="twitter:description" content="本地仓库初始化 git init：初始化本地仓库，此时可以使用git命令 git clone：将远程代码库以及提交历史添加到本地，此时不需要再次git init操作  配置 git config list 显示当前的git配置 git config （–global）user.name “xxx” 设置用户名，如果设置global则设为全局 git config （–global）user.e">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">MinHow&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        MinHow&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 WEB 开发的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="MinHow" target="_blank" href="//minhow.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/wongminho">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/WongMinHo">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/huangminhow">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-gituse" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      git常用命令（逐步增加中。。。）
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-07-30
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <!-- Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+
+## Quick Start
+
+### Create a new post -->
+<!-- # git常用命令（逐步增加中。。。） -->
+<h2 id="本地仓库初始化"><a href="#本地仓库初始化" class="headerlink" title="本地仓库初始化"></a>本地仓库初始化</h2><ul>
+<li>git init：初始化本地仓库，此时可以使用git命令</li>
+<li>git clone：将远程代码库以及提交历史添加到本地，此时不需要再次git init操作</li>
+</ul>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul>
+<li>git config list 显示当前的git配置</li>
+<li>git config （–global）user.name “xxx” 设置用户名，如果设置global则设为全局</li>
+<li>git config （–global）user.email “<a href="mailto:xxx@xx.com" target="_blank" rel="noopener">xxx@xx.com</a>“设置用户的邮箱</li>
+</ul>
+<h2 id="本地仓库内容相关"><a href="#本地仓库内容相关" class="headerlink" title="本地仓库内容相关"></a>本地仓库内容相关</h2><ul>
+<li>git add .或者git add -A 可以将当前目录的所有文件保存到暂存区</li>
+<li>git add (dir) 将指定的文件或者目录保存到暂存区</li>
+<li>git commit -m “xxx”将暂存区中的内容添加到本地仓库中，并添加描述信息</li>
+<li>git log 可以查看提交历史，每条记录对应有一个id，可以用来回滚</li>
+<li>git status 可以查看本地工作目录和暂存区的状态，可以在commit 前后来查看是否还有文件未提交到本地仓库以及文件的修改记录</li>
+<li>git reset –hard 版本id 可以将工作区的内容会退到指定版本</li>
+</ul>
+<h2 id="分支相关"><a href="#分支相关" class="headerlink" title="分支相关"></a>分支相关</h2><ul>
+<li>git branch 列出本地的所有分支</li>
+<li>git branch -r 列出远程的所有分支</li>
+<li>git branch -a 列出本地和远程的所有分支</li>
+<li>git branch xxx 新建分支，但不切换到新的分支</li>
+<li>git checkout -b xxx 新建分支，并切换到新的分支</li>
+<li>git checkout xxx 切换到指定的分支，更新本地的工作区内容</li>
+<li>git merge xxx 将指定分支合并到当前分支，自动解决冲突</li>
+<li>git branch -d xxx 删除指定的分支</li>
+</ul>
+<h2 id="远程仓库相关"><a href="#远程仓库相关" class="headerlink" title="远程仓库相关"></a>远程仓库相关</h2><ul>
+<li>git remote 查看所有远程仓库</li>
+<li>git remote set-url 远程主机名（origin） url 修改远程地址</li>
+<li>git remote rm origin 删除远程仓库</li>
+<li>git remote add origin url 添加远程仓库地址</li>
+<li>git pull 远程主机名 remote-branch ：本地-branch 将指定远程分支的内容拉取并自动解决冲突合并到本地的指定分支，相当于fetch和merge命令的集合体如果不指定本地分支，则默认拉取到当前分支；如果本地分支与远程分支存在追踪关系，则可以省略远程分支名与本地分支名。</li>
+<li>git push 远程主机名 本地-branch ：remote-branch 将本地分支内容推送到远程分支，不包括标签，如果不指定远程分支，则会推送到与本地分支同名的分支，如果远程分支不存在，则会新建。如果不指定本地分支，则会删除指定的远程分支；如果不指定本地以及远程分支，则会将当前分支推送到远程</li>
+<li>git push 远程主机名 –delete remote-branch 删除指定的远程分支</li>
+</ul>
+<h2 id="标记相关"><a href="#标记相关" class="headerlink" title="标记相关"></a>标记相关</h2><ul>
+<li>git tag 列出所有的标签</li>
+<li>git tag -l “xxx” 列出针对索引有关的标签</li>
+<li>git tag xxx 创建标签</li>
+<li>git tag -a xxx -m “xxx” 创建携带说明的标签</li>
+<li>git show xxx 列出标签的详细信息</li>
+<li>git tag -d xxx 删除指定的标签</li>
+<li>git push 远程主机名 tagname 将指定的标签推送到远程</li>
+<li>git push 远程主机名 –tags 将本地新增的标签都推送到远程</li>
+</ul>
+<!-- 
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server-–-gt"><a href="#Run-server-–-gt" class="headerlink" title="Run server –&gt;"></a>Run server –&gt;</h3><!-- 
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files-–-gt"><a href="#Generate-static-files-–-gt" class="headerlink" title="Generate static files –&gt;"></a>Generate static files –&gt;</h3><!-- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a> –&gt;<br>&lt;!– </p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a> –&gt;</p>
+-->
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年07月30日 13:01</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/30/gituse/" title="git常用命令（逐步增加中。。。）">https://fengyy51.github.io/2018/07/30/gituse/</a></p>
+        <footer>
+            <a href="https://fengyy51.github.io">
+                <img src="/images/logo.png" alt="fyy">
+                fyy
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://fengyy51.github.io/2018/07/30/gituse/&title=《git常用命令（逐步增加中。。。）》 — 日常记录&pic=https://fengyy51.github.ioimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://fengyy51.github.io/2018/07/30/gituse/&title=《git常用命令（逐步增加中。。。）》 — 日常记录&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://fengyy51.github.io/2018/07/30/gituse/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《git常用命令（逐步增加中。。。）》 — 日常记录&url=https://fengyy51.github.io/2018/07/30/gituse/&via=https://fengyy51.github.io" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://fengyy51.github.io/2018/07/30/gituse/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://fengyy51.github.io/2018/07/30/gituse/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#本地仓库初始化"><span class="post-toc-text">本地仓库初始化</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置"><span class="post-toc-text">配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#本地仓库内容相关"><span class="post-toc-text">本地仓库内容相关</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分支相关"><span class="post-toc-text">分支相关</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#远程仓库相关"><span class="post-toc-text">远程仓库相关</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#标记相关"><span class="post-toc-text">标记相关</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 fyy<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://fengyy51.github.io",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            
+        </div>
+        <div id="sidebar-menu-box-tags">
+            
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
