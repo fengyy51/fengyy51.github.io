@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>如何进行pc、移动端适配之图片展示 | 日常记录</title>
+  <title>正则表达式的属性 | 日常记录</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Fengyy,Fengyy's Blog" />
   
-  <meta name="description" content="适配方式 由于在pc端展示的图片采取横版布局，在移动端展示的图片采取竖版布局，所以为了能很好地做到适配，需要从设计的同学那里获取到两种布局的图片。  可以采取两种方式来加载图片。  整体布局依照pc模式即css中图片的url为pc端使用的图片地址，style样式为pc端适用的样式，在js文件中利用useragent来判断是否为移动端，如果是移动端则将图片url替换为移动端使用的图片地址，采取对应的">
+  <meta name="description" content="RegExp对象的属性 每个RegExp对象都包含5个属性，source、global、ignoreCase、multiline、lastIndex。  source source：是一个只读的字符串，包含正则表达式的文本。  global global：是一个只读的布尔值，看这个正则表达式是否带有修饰符g。其中g是全局匹配的意思，用来检索字符串中所有的匹配。  ignoreCase 是一个只读的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何进行pc、移动端适配之图片展示">
-<meta property="og:url" content="https://fengyy51.github.io/2018/08/11/shiPei/index.html">
+<meta property="og:title" content="正则表达式的属性">
+<meta property="og:url" content="https://fengyy51.github.io/2018/08/19/dataBind/index.html">
 <meta property="og:site_name" content="日常记录">
-<meta property="og:description" content="适配方式 由于在pc端展示的图片采取横版布局，在移动端展示的图片采取竖版布局，所以为了能很好地做到适配，需要从设计的同学那里获取到两种布局的图片。  可以采取两种方式来加载图片。  整体布局依照pc模式即css中图片的url为pc端使用的图片地址，style样式为pc端适用的样式，在js文件中利用useragent来判断是否为移动端，如果是移动端则将图片url替换为移动端使用的图片地址，采取对应的">
+<meta property="og:description" content="RegExp对象的属性 每个RegExp对象都包含5个属性，source、global、ignoreCase、multiline、lastIndex。  source source：是一个只读的字符串，包含正则表达式的文本。  global global：是一个只读的布尔值，看这个正则表达式是否带有修饰符g。其中g是全局匹配的意思，用来检索字符串中所有的匹配。  ignoreCase 是一个只读的">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-11T10:01:19.000Z">
+<meta property="og:updated_time" content="2018-08-19T10:34:43.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="如何进行pc、移动端适配之图片展示">
-<meta name="twitter:description" content="适配方式 由于在pc端展示的图片采取横版布局，在移动端展示的图片采取竖版布局，所以为了能很好地做到适配，需要从设计的同学那里获取到两种布局的图片。  可以采取两种方式来加载图片。  整体布局依照pc模式即css中图片的url为pc端使用的图片地址，style样式为pc端适用的样式，在js文件中利用useragent来判断是否为移动端，如果是移动端则将图片url替换为移动端使用的图片地址，采取对应的">
+<meta name="twitter:title" content="正则表达式的属性">
+<meta name="twitter:description" content="RegExp对象的属性 每个RegExp对象都包含5个属性，source、global、ignoreCase、multiline、lastIndex。  source source：是一个只读的字符串，包含正则表达式的文本。  global global：是一个只读的布尔值，看这个正则表达式是否带有修饰符g。其中g是全局匹配的意思，用来检索字符串中所有的匹配。  ignoreCase 是一个只读的">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -103,20 +103,20 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-shiPei" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-dataBind" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      如何进行pc、移动端适配之图片展示
+      正则表达式的属性
     </h1>
     <div class="post-title-bar">
       <ul>
           
         <li>
-          <i class="fa fa-calendar"></i>  2018-08-11
+          <i class="fa fa-calendar"></i>  2018-08-19
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -132,54 +132,41 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h3 id="适配方式"><a href="#适配方式" class="headerlink" title="适配方式"></a>适配方式</h3><ul>
-<li><p>由于在pc端展示的图片采取横版布局，在移动端展示的图片采取竖版布局，所以为了能很好地做到适配，需要从设计的同学那里获取到两种布局的图片。</p>
+            <h2 id="RegExp对象的属性"><a href="#RegExp对象的属性" class="headerlink" title="RegExp对象的属性"></a>RegExp对象的属性</h2><ul>
+<li>每个RegExp对象都包含5个属性，source、global、ignoreCase、multiline、lastIndex。</li>
+</ul>
+<h3 id="source"><a href="#source" class="headerlink" title="source"></a>source</h3><ul>
+<li>source：是一个只读的字符串，包含正则表达式的文本。</li>
+</ul>
+<h3 id="global"><a href="#global" class="headerlink" title="global"></a>global</h3><ul>
+<li>global：是一个只读的布尔值，看这个正则表达式是否带有修饰符g。其中g是全局匹配的意思，用来检索字符串中所有的匹配。</li>
+</ul>
+<h3 id="ignoreCase"><a href="#ignoreCase" class="headerlink" title="ignoreCase"></a>ignoreCase</h3><ul>
+<li>是一个只读的布尔值，查看表达式中是否带有修饰符i。此修饰符说明模式匹配是不区分大小写的。</li>
+</ul>
+<h3 id="multiline"><a href="#multiline" class="headerlink" title="multiline"></a>multiline</h3><ul>
+<li>修饰符m，用以在多行模式中执行匹配，需要配合^ $使用，使用^$除了匹配整个字符串的开始和结尾之外，还能匹配每行的开始和结尾。</li>
+</ul>
+<h3 id="lastIndex"><a href="#lastIndex" class="headerlink" title="lastIndex"></a>lastIndex</h3><ul>
+<li>是可读写的属性，如果匹配模式中带有g修饰符，这个属性存储着整个字符串中下一次检索的开始位置，这个属性会被exec() test()方法用到。需要着重注意！！</li>
+</ul>
+<h3 id="exec方法"><a href="#exec方法" class="headerlink" title="exec方法"></a>exec方法</h3><ul>
+<li><p>此方法是在一个字符串中执行匹配检索，如果它没有找到任何匹配它就返回null，但如果找到了一个匹配，就返回一个数组。</p>
 </li>
-<li><p>可以采取两种方式来加载图片。</p>
-<ul>
-<li>整体布局依照pc模式即css中图片的url为pc端使用的图片地址，style样式为pc端适用的样式，在js文件中利用useragent来判断是否为移动端，如果是移动端则将图片url替换为移动端使用的图片地址，采取对应的样式。这样的做法会导致在本地测试期间需要刷新页面才可正确显示布局。</li>
-<li>在css文件中通过media查询判断设备的宽度和高度尺存来使用不同的图片url，采取不同的样式。</li>
-</ul>
-</li>
-</ul>
-<h3 id="pc端图片响应式布局"><a href="#pc端图片响应式布局" class="headerlink" title="pc端图片响应式布局"></a>pc端图片响应式布局</h3><ul>
-<li>采取background的策略，为保证响应式的显示效果设置其background-size为100% auto，background-position为center，background-color设置为背景图片同色，这样就可以保证图片不会在大尺寸屏幕上被拉伸。备注：为其设置背景颜色的dom结构需要保证width100% height100%，否则不会显示背景图片，因为内容为空导致height为0</li>
-</ul>
-<h3 id="移动端图片布局"><a href="#移动端图片布局" class="headerlink" title="移动端图片布局"></a>移动端图片布局</h3><ul>
-<li><p>针对需高度还原图片</p>
-<ul>
-<li>为了保证图片在各个机型中不出现失真的情况，可以将background-size设置为contain。</li>
-</ul>
-</li>
-<li><p>针对低质量要求图片</p>
-<ul>
-<li>对于只需要在各个机型可以成功展示的图片，可以将background-size设置为100% 100%,这样就可以在各个机型中展示时将图片扩充到整个屏幕中。</li>
-</ul>
-</li>
-<li><p>由于对图片布局来说，使用background的频率很高。此处附上对这一属性的详细说明：<a href="http://www.w3school.com.cn/cssref/pr_background.asp" target="_blank" rel="noopener">background</a></p>
+<li><p>当调用exec方法的正则表达式对象具有修饰符g时，它将把当前正则表达式对象的lastIndex属性设置为上一次匹配子串的最后字符的下一个位置，当同一个正则表达式第二次调用exec方法时，它会将从lastIndex属性所指示的字符串处开始检索，如果exec方法没有发现任何匹配结果，会将lastIndex重置为0</p>
 </li>
 </ul>
-<h3 id="移动端实机测试问题"><a href="#移动端实机测试问题" class="headerlink" title="移动端实机测试问题"></a>移动端实机测试问题</h3><ul>
-<li><p>在Chrome开发者工具中的展示效果与实机测试不一定相符，为了解决这种情况，可以使用实机进行本地测试。</p>
+<h3 id="test方法"><a href="#test方法" class="headerlink" title="test方法"></a>test方法</h3><ul>
+<li><p>它的参数是一个字符串，用test方法对某个字符串进行检测，如果包含正则表达式的一个匹配结果，则返回true，否则返回false</p>
 </li>
-<li><p>移动端测试方法为: </p>
-<ul>
-<li><p>可以借助charles，下载安装后打开proxy proxy settings，port填写端口号（可以使用默认的8888），勾选“enable transparent http proxying”，点击确定。</p>
-</li>
-<li><p>手机和电脑连接同一个网络，对手机端的无线网络进行设置，进入高级设置后选择手动代理，填写mac端的ip 端口号。之后手机访问需要测试的页面。</p>
-</li>
-<li><p>如果是需要访问https请求的页面，则设置ssl proxy settings，手机还需下载ssl证书。方法为：在charles中help /ssl proxying/ install charles root。。。点击后弹出对话框，选择确定。手机端输入对话框中的网址即可下载证书。</p>
-</li>
-</ul>
-</li>
-<li><p>对于实机测出的问题，可以使用media查询来对此机型进行样式的修改。涉及表单的话，如果出现由于表单中内容过多导致小尺寸机型被遮挡的问题，可以将所有需要填写的内容放在一个div中，设置其固定尺寸，overflow-y设为scroll。</p>
+<li><p>当调用test方法的正则表达式对象具有修饰符g时，它的行为和exec方法相同，因为它从lastIndex指定的位置处开始检索某个字符串，如果它找到了一个匹配结果，那么它将立即设置lastIndex为上一次匹配子串的最后字符的下一个位置。这样的话就会出现带有修饰符g时，第一次test时结果为true，第二次test时结果为false，除非手动将lastIndex重置为0，那样的话第二次调用test方法时结果为true；或者将g修饰符去掉。</p>
 </li>
 </ul>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年08月11日 18:01</p>
-        <p>原始链接： <a class="post-url" href="/2018/08/11/shiPei/" title="如何进行pc、移动端适配之图片展示">https://fengyy51.github.io/2018/08/11/shiPei/</a></p>
+        <p>最后更新： 2018年08月19日 18:34</p>
+        <p>原始链接： <a class="post-url" href="/2018/08/19/dataBind/" title="正则表达式的属性">https://fengyy51.github.io/2018/08/19/dataBind/</a></p>
         <footer>
             <a href="https://fengyy51.github.io">
                 <img src="/images/logo.png" alt="fyy">
@@ -236,7 +223,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://fengyy51.github.io/2018/08/11/shiPei/&title=《如何进行pc、移动端适配之图片展示》 — 日常记录&pic=https://fengyy51.github.ioimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://fengyy51.github.io/2018/08/19/dataBind/&title=《正则表达式的属性》 — 日常记录&pic=https://fengyy51.github.ioimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -246,22 +233,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://fengyy51.github.io/2018/08/11/shiPei/&title=《如何进行pc、移动端适配之图片展示》 — 日常记录&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://fengyy51.github.io/2018/08/19/dataBind/&title=《正则表达式的属性》 — 日常记录&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://fengyy51.github.io/2018/08/11/shiPei/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://fengyy51.github.io/2018/08/19/dataBind/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《如何进行pc、移动端适配之图片展示》 — 日常记录&url=https://fengyy51.github.io/2018/08/11/shiPei/&via=https://fengyy51.github.io" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《正则表达式的属性》 — 日常记录&url=https://fengyy51.github.io/2018/08/19/dataBind/&via=https://fengyy51.github.io" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://fengyy51.github.io/2018/08/11/shiPei/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://fengyy51.github.io/2018/08/19/dataBind/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -271,7 +258,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://fengyy51.github.io/2018/08/11/shiPei/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://fengyy51.github.io/2018/08/19/dataBind/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -289,26 +276,16 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#适配方式"><span class="post-toc-text">适配方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#pc端图片响应式布局"><span class="post-toc-text">pc端图片响应式布局</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#移动端图片布局"><span class="post-toc-text">移动端图片布局</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#移动端实机测试问题"><span class="post-toc-text">移动端实机测试问题</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RegExp对象的属性"><span class="post-toc-text">RegExp对象的属性</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#source"><span class="post-toc-text">source</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#global"><span class="post-toc-text">global</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ignoreCase"><span class="post-toc-text">ignoreCase</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#multiline"><span class="post-toc-text">multiline</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#lastIndex"><span class="post-toc-text">lastIndex</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#exec方法"><span class="post-toc-text">exec方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#test方法"><span class="post-toc-text">test方法</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2018/08/19/dataBind/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          正则表达式的属性
-        
-      </span>
-    </a>
   
-  
-    <a href="/2018/08/03/creatBlog/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">手把手教你搭博客</span>
+    <a href="/2018/08/11/shiPei/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">如何进行pc、移动端适配之图片展示</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
