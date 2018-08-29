@@ -8,17 +8,17 @@
   
     <meta name="keywords" content="Fengyy,Fengyy's Blog" />
   
-  <meta name="description" content="echarts的使用之热力图echarts热力图的绘制地图数据的获取 由于echarts中地图数据全面下线，费了很大力气搜索到中国的数据分为china.js china.json 最终使用china.json来解决，地址为https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json  chinajson使用方法为  $.get（’ht">
+  <meta name="description" content="echarts的使用之热力图echarts热力图的绘制地图数据的获取 由于echarts中地图数据全面下线，费了很大力气搜索到中国的数据分为china.js china.json 最终使用china.json来解决，地址为https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json  chinajson使用方法为 $.get（&amp;apo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="日常记录">
 <meta property="og:url" content="https://fengyy51.github.io/2018/08/29/echarts/index.html">
 <meta property="og:site_name" content="日常记录">
-<meta property="og:description" content="echarts的使用之热力图echarts热力图的绘制地图数据的获取 由于echarts中地图数据全面下线，费了很大力气搜索到中国的数据分为china.js china.json 最终使用china.json来解决，地址为https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json  chinajson使用方法为  $.get（’ht">
+<meta property="og:description" content="echarts的使用之热力图echarts热力图的绘制地图数据的获取 由于echarts中地图数据全面下线，费了很大力气搜索到中国的数据分为china.js china.json 最终使用china.json来解决，地址为https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json  chinajson使用方法为 $.get（&amp;apo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-29T07:19:19.000Z">
+<meta property="og:updated_time" content="2018-08-29T07:21:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日常记录">
-<meta name="twitter:description" content="echarts的使用之热力图echarts热力图的绘制地图数据的获取 由于echarts中地图数据全面下线，费了很大力气搜索到中国的数据分为china.js china.json 最终使用china.json来解决，地址为https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json  chinajson使用方法为  $.get（’ht">
+<meta name="twitter:description" content="echarts的使用之热力图echarts热力图的绘制地图数据的获取 由于echarts中地图数据全面下线，费了很大力气搜索到中国的数据分为china.js china.json 最终使用china.json来解决，地址为https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json  chinajson使用方法为 $.get（&amp;apo">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -113,35 +113,37 @@
 <h2 id="echarts的使用之热力图"><a href="#echarts的使用之热力图" class="headerlink" title="echarts的使用之热力图"></a>echarts的使用之热力图</h2><h3 id="echarts热力图的绘制"><a href="#echarts热力图的绘制" class="headerlink" title="echarts热力图的绘制"></a>echarts热力图的绘制</h3><h4 id="地图数据的获取"><a href="#地图数据的获取" class="headerlink" title="地图数据的获取"></a>地图数据的获取</h4><ul>
 <li><p>由于echarts中地图数据全面下线，费了很大力气搜索到中国的数据分为china.js china.json 最终使用china.json来解决，地址为<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json" target="_blank" rel="noopener">https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json</a></p>
 </li>
-<li><p>chinajson使用方法为<br>  $.get（’<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json&#39;" target="_blank" rel="noopener">https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json&#39;</a>, function (chinaJson) {</p>
-<pre><code>echarts.registerMap(&apos;china&apos;, chinaJson);
+<li><p>chinajson使用方法为</p>
+<pre><code>$.get（&apos;https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json&apos;, function (chinaJson) {
+    echarts.registerMap(&apos;china&apos;, chinaJson);
 </code></pre></li>
-<li><p>echarts结合使用方法</p>
-<ul>
-<li>首先去官网下载echarts文件，引入后，进行初始化容器（echarts.init(xxx))，引入chinajson文件,加载成功后对chart进行配置项设置</li>
-<li>visualMap可以用来对各省市颜色的配置，show：false则会使展示条隐藏。visualMap有两种方式，连续和分段。如果需要对数据进行精确分区进而准确控制颜色时，需要使用分段方式，具体使用参考echarts文档。</li>
 </ul>
+<h4 id="echarts结合使用方法"><a href="#echarts结合使用方法" class="headerlink" title="echarts结合使用方法"></a>echarts结合使用方法</h4><ul>
+<li><p>首先去官网下载echarts文件，引入后，进行初始化容器（echarts.init(xxx))，引入chinajson文件,加载成功后对chart进行配置项设置</p>
 </li>
-<li><p>地图响应式布局</p>
-<ul>
+<li><p>visualMap可以用来对各省市颜色的配置，show：false则会使展示条隐藏。visualMap有两种方式，连续和分段。如果需要对数据进行精确分区进而准确控制颜色时，需要使用分段方式，具体使用参考echarts文档。</p>
+</li>
+</ul>
+<h4 id="地图响应式布局"><a href="#地图响应式布局" class="headerlink" title="地图响应式布局"></a>地图响应式布局</h4><ul>
 <li><p>正常情况下在window.onresize事件触发时调用chart.resize方法即可。但进行实际操作时无效，后查找到解决方案：</p>
-<p>var resizeWorldMapContainer = function () {</p>
-<pre><code>var mapContainer = document.getElementById(&apos;main&apos;);
-mapContainer.style.width = window.innerWidth + &apos;px&apos;;
-mapContainer.style.height = window.innerHeight + &apos;px&apos;;
-</code></pre><p>};<br>//设置容器高宽<br>resizeWorldMapContainer();<br>window.onresize = function () {</p>
-<pre><code>//重置容器高宽
+<pre><code>var resizeWorldMapContainer = function () {
+    var mapContainer = document.getElementById(&apos;main&apos;);
+    mapContainer.style.width = window.innerWidth + &apos;px&apos;;
+    mapContainer.style.height = window.innerHeight + &apos;px&apos;;
+};
+//设置容器高宽
 resizeWorldMapContainer();
-chart.resize();
-</code></pre><p>};</p>
-</li>
-</ul>
-</li>
+window.onresize = function () {
+    //重置容器高宽
+    resizeWorldMapContainer();
+    chart.resize();
+};
+</code></pre></li>
 </ul>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年08月29日 15:19</p>
+        <p>最后更新： 2018年08月29日 15:21</p>
         <p>原始链接： <a class="post-url" href="/2018/08/29/echarts/" title="">https://fengyy51.github.io/2018/08/29/echarts/</a></p>
         <footer>
             <a href="https://fengyy51.github.io">
@@ -252,7 +254,7 @@ chart.resize();
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#echarts的使用之热力图"><span class="post-toc-text">echarts的使用之热力图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#echarts热力图的绘制"><span class="post-toc-text">echarts热力图的绘制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#地图数据的获取"><span class="post-toc-text">地图数据的获取</span></a></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#echarts的使用之热力图"><span class="post-toc-text">echarts的使用之热力图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#echarts热力图的绘制"><span class="post-toc-text">echarts热力图的绘制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#地图数据的获取"><span class="post-toc-text">地图数据的获取</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#echarts结合使用方法"><span class="post-toc-text">echarts结合使用方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#地图响应式布局"><span class="post-toc-text">地图响应式布局</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
     
