@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>日常记录</title>
+  <title>echarts的使用之热力图绘制 | 日常记录</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Fengyy,Fengyy's Blog" />
   
-  <meta name="description" content="echarts的使用之热力图echarts热力图的绘制地图数据的获取 由于echarts中地图数据全面下线，费了很大力气搜索到中国的数据分为china.js china.json 最终使用china.json来解决，地址为https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json  chinajson使用方法为 $.get（&amp;apo">
+  <meta name="description" content="echarts热力图的绘制地图数据的获取 由于echarts中地图数据全面下线，费了很大力气搜索到中国的数据分为china.js china.json 最终使用china.json来解决，地址为https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json  chinajson使用方法为 $.get（&amp;apos;https://s3-us">
 <meta property="og:type" content="article">
-<meta property="og:title" content="日常记录">
+<meta property="og:title" content="echarts的使用之热力图绘制">
 <meta property="og:url" content="https://fengyy51.github.io/2018/08/29/echarts/index.html">
 <meta property="og:site_name" content="日常记录">
-<meta property="og:description" content="echarts的使用之热力图echarts热力图的绘制地图数据的获取 由于echarts中地图数据全面下线，费了很大力气搜索到中国的数据分为china.js china.json 最终使用china.json来解决，地址为https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json  chinajson使用方法为 $.get（&amp;apo">
+<meta property="og:description" content="echarts热力图的绘制地图数据的获取 由于echarts中地图数据全面下线，费了很大力气搜索到中国的数据分为china.js china.json 最终使用china.json来解决，地址为https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json  chinajson使用方法为 $.get（&amp;apos;https://s3-us">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-29T07:21:45.000Z">
+<meta property="og:updated_time" content="2018-08-29T07:24:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="日常记录">
-<meta name="twitter:description" content="echarts的使用之热力图echarts热力图的绘制地图数据的获取 由于echarts中地图数据全面下线，费了很大力气搜索到中国的数据分为china.js china.json 最终使用china.json来解决，地址为https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json  chinajson使用方法为 $.get（&amp;apo">
+<meta name="twitter:title" content="echarts的使用之热力图绘制">
+<meta name="twitter:description" content="echarts热力图的绘制地图数据的获取 由于echarts中地图数据全面下线，费了很大力气搜索到中国的数据分为china.js china.json 最终使用china.json来解决，地址为https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json  chinajson使用方法为 $.get（&amp;apos;https://s3-us">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -106,11 +106,33 @@
         <section id="main" class="body-wrap"><article id="post-echarts" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      echarts的使用之热力图绘制
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-08-29
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <hr>
-<h2 id="echarts的使用之热力图"><a href="#echarts的使用之热力图" class="headerlink" title="echarts的使用之热力图"></a>echarts的使用之热力图</h2><h3 id="echarts热力图的绘制"><a href="#echarts热力图的绘制" class="headerlink" title="echarts热力图的绘制"></a>echarts热力图的绘制</h3><h4 id="地图数据的获取"><a href="#地图数据的获取" class="headerlink" title="地图数据的获取"></a>地图数据的获取</h4><ul>
+            <h3 id="echarts热力图的绘制"><a href="#echarts热力图的绘制" class="headerlink" title="echarts热力图的绘制"></a>echarts热力图的绘制</h3><h4 id="地图数据的获取"><a href="#地图数据的获取" class="headerlink" title="地图数据的获取"></a>地图数据的获取</h4><ul>
 <li><p>由于echarts中地图数据全面下线，费了很大力气搜索到中国的数据分为china.js china.json 最终使用china.json来解决，地址为<a href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json" target="_blank" rel="noopener">https://s3-us-west-2.amazonaws.com/s.cdpn.io/95368/china.json</a></p>
 </li>
 <li><p>chinajson使用方法为</p>
@@ -143,8 +165,8 @@ window.onresize = function () {
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年08月29日 15:21</p>
-        <p>原始链接： <a class="post-url" href="/2018/08/29/echarts/" title="">https://fengyy51.github.io/2018/08/29/echarts/</a></p>
+        <p>最后更新： 2018年08月29日 15:24</p>
+        <p>原始链接： <a class="post-url" href="/2018/08/29/echarts/" title="echarts的使用之热力图绘制">https://fengyy51.github.io/2018/08/29/echarts/</a></p>
         <footer>
             <a href="https://fengyy51.github.io">
                 <img src="/images/logo.png" alt="fyy">
@@ -201,7 +223,7 @@ window.onresize = function () {
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://fengyy51.github.io/2018/08/29/echarts/&title=日常记录&pic=https://fengyy51.github.ioimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://fengyy51.github.io/2018/08/29/echarts/&title=《echarts的使用之热力图绘制》 — 日常记录&pic=https://fengyy51.github.ioimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -211,7 +233,7 @@ window.onresize = function () {
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://fengyy51.github.io/2018/08/29/echarts/&title=日常记录&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://fengyy51.github.io/2018/08/29/echarts/&title=《echarts的使用之热力图绘制》 — 日常记录&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
@@ -221,7 +243,7 @@ window.onresize = function () {
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=日常记录&url=https://fengyy51.github.io/2018/08/29/echarts/&via=https://fengyy51.github.io" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《echarts的使用之热力图绘制》 — 日常记录&url=https://fengyy51.github.io/2018/08/29/echarts/&via=https://fengyy51.github.io" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -254,7 +276,7 @@ window.onresize = function () {
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#echarts的使用之热力图"><span class="post-toc-text">echarts的使用之热力图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#echarts热力图的绘制"><span class="post-toc-text">echarts热力图的绘制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#地图数据的获取"><span class="post-toc-text">地图数据的获取</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#echarts结合使用方法"><span class="post-toc-text">echarts结合使用方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#地图响应式布局"><span class="post-toc-text">地图响应式布局</span></a></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#echarts热力图的绘制"><span class="post-toc-text">echarts热力图的绘制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#地图数据的获取"><span class="post-toc-text">地图数据的获取</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#echarts结合使用方法"><span class="post-toc-text">echarts结合使用方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#地图响应式布局"><span class="post-toc-text">地图响应式布局</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
